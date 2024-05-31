@@ -11,7 +11,22 @@ def group_anagrams(a):
     for word in a:
         #Sort the characters in the word and join them back into a string
         sorted_word = ''.join(sorted(word))
-        print(sorted_word)
+        print(f'Word: {word}, Sorted Word: {sorted_word}')
+
+
+        #Check if the sorted word exists as a key in the dictionary
+        if sorted_word in anagram_dict:
+            #if the key exists, append the word to the list of anagrams
+            anagram_dict[sorted_word].append(word)
+        else:
+            #if the key doesnot exit, create a new list with word as its first element
+            anagram_dict[sorted_word] = [word]
+
+        #Print the state of anagram_dict after each insertion
+        print("Current anagram_dict: ", anagram_dict)
+
+
+
 
 
 
