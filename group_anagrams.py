@@ -25,6 +25,11 @@ def group_anagrams(a):
         #Print the state of anagram_dict after each insertion
         print("Current anagram_dict: ", anagram_dict)
 
+    #convert the dictionary values to a list and return
+    result = list(anagram_dict.values())
+    print("final grouped anagrams:", result)
+    return result
+
 
 
 
